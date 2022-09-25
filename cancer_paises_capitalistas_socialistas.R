@@ -29,4 +29,38 @@ library(tidyverse)
 library(cols4all)
 library(hrbrthemes)
 
+# Carregar dados ---------------------------------------------------------------------------------------------------------------------------
+
+ca <- read.csv("share-of-population-with-cancer.csv")
+view(ca)
+names(ca)
+
+# Manipular dados --------------------------------------------------------------------------------------------------------------------------
+
+ca <- ca %>%
+  select(-Code) %>%
+  rename(por_cancer = Prevalence...Neoplasms...Sex..Both...Age..Age.standardized..Percent.) %>%
+  view()
+
+ca1 <- ca %>%
+  filter(Entity %in% c("China", "North Korea", "Cuba",
+                       "United States", "Japan", "Germany")) %>%
+  group_by(Entity) %>%
+  summarise(media = mean(por_cancer),
+            n = n(), sd = sd(por_cancer),
+            se = sd/sqrt(n)) %>%
+  view()
+
+ca2 <- ca %>%
+  filter(Entity %in% c("China", "North Korea", "Cuba",
+                       "United States", "Japan", "Germany"),
+         (between(Year, 1990, 2017))) %>%
+  view()
+  
+
+
+
+
+
+
 
