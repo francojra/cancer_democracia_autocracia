@@ -70,8 +70,10 @@ ggplot(ca1, aes(x = fct_reorder(Entity, media), y = media,
                                "#117733", "#332288", "#AA4499")) +
   scale_y_continuous(expand = expansion(mult = c(0,0))) +
   labs(x = "Países", y = "Porcentagem média da população com câncer") +
-  theme_ipsum() +
-  theme(legend.position = "none")
+  theme_ipsum(axis_title_size = 16,
+              axis_text_size = 14) +
+  theme(legend.position = "none",
+    axis.text = element_text(color = "black"))
 
 
 
