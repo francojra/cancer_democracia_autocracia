@@ -82,7 +82,9 @@ ggplot(ca2, aes(x = Year, y = por_cancer,
   geom_point(shape = 15, size = 2.5) +
   geom_line(size = 1.2) +
   scale_color_manual(values = c("#88CCEE", "#CC6677", "#DDCC77",
-                               "#117733", "#332288", "#AA4499")) +
+                               "#117733", "#332288", "#AA4499"),
+                     labels = c("China", "Cuba", "Alemanha",
+                                "Japão", "Coreia do Norte", "Estados Unidos")) +
   labs(x = "Tempo (anos)", 
        y = "Porcentagem média da população com câncer",
        col = "Países") +
