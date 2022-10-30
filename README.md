@@ -1,4 +1,4 @@
-# Câncer em países capitalistas e comunistas
+# Câncer em países democratas e autocratas
 
 ### Autoria do script: Jeanne Franco
 ### Data: 24/09/22
