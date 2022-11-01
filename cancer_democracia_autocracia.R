@@ -100,14 +100,13 @@ ggplot(ca2, aes(x = Year, y = por_cancer,
 c4a("dark2", 3)
 
 ggplot(ca3, aes(x = Year, y = por_cancer, 
-                  group = Entity, col = Entity)) +
-  geom_line(size = 2, linetype = Entity) +
-  scale_color_manual(values = c("#1B9E77", "#D95F02", "#7570B3"),
+                  group = Entity, color = Entity)) +
+  geom_line(size = 2) +
+  scale_color_manual(values = c("#1B9E77", '#999999','#E69F00'),
                      labels = c("Brasil", "China", "Estados Unidos")) +
-  scale_linetype_manual(values=c("twodash", "dotted", "solid")) +
   labs(x = "Tempo (anos)", y = "Porcentagem da população com câncer", 
        color = "Países") +
-  theme_hc() +
+  theme_light() +
   theme(axis.title = element_text(size = 18),
         axis.text = element_text(color = "black", size = 15),
         legend.text = element_text(size = 12))
