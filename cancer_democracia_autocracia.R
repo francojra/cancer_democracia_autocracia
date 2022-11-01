@@ -104,7 +104,7 @@ ggplot(ca3, aes(x = Year, y = por_cancer,
   geom_line(size = 2) +
   scale_color_manual(values = c("#1B9E77", '#999999','#E69F00'),
                      labels = c("Brasil", "China", "Estados Unidos")) +
-  labs(x = "Tempo (anos)", y = "Porcentagem da população com câncer", 
+  labs(x = "Tempo (anos)", y = "População com câncer (%)", 
        color = "Países") +
   theme_light() +
   theme(axis.title = element_text(size = 18),
