@@ -97,8 +97,6 @@ ggplot(ca2, aes(x = Year, y = por_cancer,
               axis_text_size = 14) +
   theme(axis.text = element_text(color = "black"))
 
-c4a("dark2", 3)
-
 ggplot(ca3, aes(x = Year, y = por_cancer, 
                   group = Entity, color = Entity)) +
   geom_line(size = 2) +
