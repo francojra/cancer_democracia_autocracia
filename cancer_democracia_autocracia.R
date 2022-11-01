@@ -102,7 +102,7 @@ c4a("dark2", 3)
 ggplot(ca3, aes(x = Year, y = por_cancer, 
                   group = Entity, color = Entity)) +
   geom_line(size = 2) +
-  scale_color_manual(values = c("#1B9E77", '#999999','#E69F00'),
+  scale_color_manual(values = c('#1B9E77', '#999999','#E69F00'),
                      labels = c("Brasil", "China", "Estados Unidos")) +
   labs(x = "Tempo (anos)", y = "População com câncer (%)", 
        color = "Países") +
